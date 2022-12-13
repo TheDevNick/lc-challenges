@@ -30,4 +30,4 @@ for (const num of arr){
   return false;
 }
 
-console.log(findDuplicates([1, 2, 3,3 ]), false);
+console.log(findDuplicates([1, 2, 3,3 ]), true);
