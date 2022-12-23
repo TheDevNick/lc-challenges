@@ -24,19 +24,14 @@ Output: 3
 Explanation: F(4) = F(3) + F(2) = 2 + 1 = 3.
 */
 
-let fib = n => {
+let fib = (n) => {
+  let arr = [0, 1];
+  for (let i = 2; i <= n; i++) {
+    arr[i] = arr[i - 1] + arr[i - 2];
+  }
 
-    if (n == 0 || n == 1) {
-        return n
-    }
+  return arr[n];
+};
 
-    let arr = [0,1]
-    for (let i = 2; i <= n; i++){
-        arr.push(arr[i - 1] + arr[i - 2])
-    }
-
-    return arr[arr.length - 1]
-}
-
-console.log(fib(2), 1)
-console.log(fib(3), 2)
+console.log(fib(2), 1);
+console.log(fib(3), 2);
